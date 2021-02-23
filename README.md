@@ -2,6 +2,7 @@
 
 ## Autor
 * Augusto Coutinho Freitas
+* Leonardo Augusto Moreira Lourenço
 * Lucas Alves Gusmão
 
 ## Orientador
