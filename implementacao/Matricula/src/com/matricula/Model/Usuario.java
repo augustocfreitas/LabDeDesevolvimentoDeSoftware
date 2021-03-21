@@ -1,22 +1,30 @@
 package com.matricula.Model;
 
-public class Usuario extends DAO implements ObjectWithID {
-    private int id;
+public class Usuario {
     private int matricula;
     private String senha;
     private String rg;
     private String nome;
 
-    Usuario() {
-        super("usuario.bin");
+    public Usuario() {}
+
+    public Usuario(int matricula, String senha, String rg, String nome) {
+        setMatricula(matricula);
+        setSenha(senha);
+        setRg(rg);
+        setNome(nome);
     }
 
-    public int getId() {
-        return id;
+    public Usuario(String string) {
+        var strings = string.split(";");
+        setMatricula(Integer.parseInt(strings[0]));
+        setSenha(strings[1]);
+        setRg(strings[2]);
+        setNome(strings[3]);
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String toString() {
+        return "" + getMatricula() + ";" + getSenha() + ";" + getRg() + ";" + getNome();
     }
 
     public int getMatricula() {
