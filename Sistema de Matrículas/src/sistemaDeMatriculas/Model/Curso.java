@@ -1,11 +1,23 @@
 package sistemaDeMatriculas.Model;
 
-public class Curso extends DAO implements ObjectWithID {
+public class Curso {
     private int id;
     private String nome;
 
-    Curso() {
-        super("curso.bin");
+    public Curso(int id, String nome) {
+        setId(id);
+        setNome(nome);
+    }
+
+    public Curso(String string) {
+        var strings = string.split(";");
+
+        setId(Integer.parseInt(strings[0]));
+        setNome(strings[1]);
+    }
+
+    public String toString() {
+        return "" + getId() + ";" + getNome();
     }
 
     public int getId() {

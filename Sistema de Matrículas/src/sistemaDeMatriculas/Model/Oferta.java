@@ -2,15 +2,32 @@ package sistemaDeMatriculas.Model;
 
 import java.util.ArrayList;
 
-public class Oferta extends DAO implements ObjectWithID {
+public class Oferta {
     private int id;
-    private ArrayList<Aluno> alunos;
-    private Professor professor;
-    private Disciplina disciplina;
-    private Curso curso;
+    private int matriculaProfessor;
+    private int idDisciplina;
+    private int idCurso;
+    private ArrayList<Integer> matriculasAlunos;
 
-    Oferta() {
-        super("oferta.bin");
+    public Oferta(int id, int matriculaProfessor, int idDisciplina, int idCurso) {
+        setId(id);
+        setMatriculaProfessor(matriculaProfessor);
+        setIdDisciplina(idDisciplina);
+        setIdCurso(idCurso);
+    }
+
+    public Oferta(String string) {
+        var strings = string.split(";");
+
+        setId(Integer.parseInt(strings[0]));
+        setMatriculaProfessor(Integer.parseInt(strings[1]));
+        setIdDisciplina(Integer.parseInt(strings[2]));
+        setIdCurso(Integer.parseInt(strings[3]));
+        setMatriculasAlunos(new ArrayList<>());
+
+        for (int i = 4; i < strings.length; i++) {
+            matriculasAlunos.add(Integer.parseInt(strings[i]));
+        }
     }
 
     public int getId() {
@@ -21,35 +38,35 @@ public class Oferta extends DAO implements ObjectWithID {
         this.id = id;
     }
 
-    public ArrayList<Aluno> getAlunos() {
-        return alunos;
+    public int getMatriculaProfessor() {
+        return matriculaProfessor;
     }
 
-    public void setAlunos(ArrayList<Aluno> alunos) {
-        this.alunos = alunos;
+    public void setMatriculaProfessor(int matriculaProfessor) {
+        this.matriculaProfessor = matriculaProfessor;
     }
 
-    public Professor getProfessor() {
-        return professor;
+    public int getIdDisciplina() {
+        return idDisciplina;
     }
 
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
+    public void setIdDisciplina(int idDisciplina) {
+        this.idDisciplina = idDisciplina;
     }
 
-    public Disciplina getDisciplina() {
-        return disciplina;
+    public int getIdCurso() {
+        return idCurso;
     }
 
-    public void setDisciplina(Disciplina disciplina) {
-        this.disciplina = disciplina;
+    public void setIdCurso(int idCurso) {
+        this.idCurso = idCurso;
     }
 
-    public Curso getCurso() {
-        return curso;
+    public ArrayList<Integer> getMatriculasAlunos() {
+        return matriculasAlunos;
     }
 
-    public void setCurso(Curso curso) {
-        this.curso = curso;
+    public void setMatriculasAlunos(ArrayList<Integer> matriculasAlunos) {
+        this.matriculasAlunos = matriculasAlunos;
     }
 }
