@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemaDeMatriculas.Controller.GerarBoletoController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemaDeMatriculas.Controller.VisualizarBoletoController">
    <children>
       <Pane prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
       <Pane layoutY="555.0" prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
@@ -21,7 +21,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="357.0" layoutY="72.0" prefHeight="50.0" prefWidth="191.0" text="Gerar Boleto" textFill="#013a63">
+      <Label layoutX="326.0" layoutY="73.0" prefHeight="50.0" prefWidth="253.0" text="Visualizar Boleto" textFill="#013a63">
          <font>
             <Font size="34.0" />
          </font>

@@ -16,7 +16,7 @@ public class AreaDoAlunoController {
     private Button btn_CancelarMatricula;
 
     @FXML
-    private Button btn_GerarBoleto;
+    private Button btn_VisualizarBoleto;
 
     @FXML
     void action_CancelarMatricula(ActionEvent event) {
@@ -24,7 +24,7 @@ public class AreaDoAlunoController {
     }
 
     @FXML
-    void action_GerarBoleto(ActionEvent event) {
+    void action_VisualizarBoleto(ActionEvent event) {
 
     }
 

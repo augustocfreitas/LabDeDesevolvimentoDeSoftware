@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
 
-public class GerarBoletoController {
+public class VisualizarBoletoController {
 
     @FXML
     private Button btn_Sair;
