@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemaDeMatriculas.Controller.ListarAlunosController">
+   <children>
+      <Pane prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
+      <Pane layoutY="555.0" prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
+      <Label layoutX="229.0" layoutY="170.0" prefHeight="33.0" prefWidth="152.0" text="Selecione o Curso:" textFill="#013a63">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="225.0" prefHeight="33.0" prefWidth="191.0" text="Selecione a Disciplina:" textFill="#013a63">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBox_Curso" layoutX="485.0" layoutY="174.0" prefHeight="25.0" prefWidth="191.0" />
+      <ChoiceBox fx:id="choiceBox_Disciplina" layoutX="485.0" layoutY="229.0" prefHeight="25.0" prefWidth="191.0" />
+      <Button fx:id="btn_Sair" layoutX="569.0" layoutY="354.0" mnemonicParsing="false" onAction="#action_VoltarAreaDoAluno" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #C82333;" text="Sair" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="302.0" layoutY="73.0" prefHeight="50.0" prefWidth="366.0" text="Matricular em Disciplina" textFill="#013a63">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_Matricular" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" onAction="#action_MatricularAlunoEmDisciplina" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #2A6F97;" text="Matricular" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
