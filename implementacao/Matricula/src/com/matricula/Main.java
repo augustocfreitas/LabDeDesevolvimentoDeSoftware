@@ -15,7 +15,7 @@ public class Main {
                 ProfessorView.initialize();
                 break;
             case "Aluno":
-//                AlunoView.initialize();
+                AlunoView.initialize();
                 break;
             case "Secretaria":
                 SecretariaView.initialize();

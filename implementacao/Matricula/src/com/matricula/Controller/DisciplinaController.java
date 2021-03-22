@@ -5,6 +5,7 @@ import com.matricula.Model.DAO;
 import com.matricula.Model.Disciplina;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class DisciplinaController {
     private static ArrayList<Disciplina> disciplinas = new ArrayList<>();
@@ -28,5 +29,14 @@ public class DisciplinaController {
         }
 
         return disciplinas;
+    }
+
+    public static Disciplina get(int id) {
+        getAll();
+
+        return disciplinas
+                .stream()
+                .filter(disciplina -> disciplina.getId() == id)
+                .collect(Collectors.toList()).get(0);
     }
 }

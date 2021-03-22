@@ -5,6 +5,7 @@ import com.matricula.Model.DAO;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.Collectors;
 
 public class AlunoController {
     private static ArrayList<Aluno> alunos = new ArrayList<>();
@@ -35,11 +36,18 @@ public class AlunoController {
         alunos = new ArrayList<>();
 
         if (alunoString != null) {
-            alunoString.forEach(string -> {
-                alunos.add(new Aluno(string));
-            });
+            alunoString.forEach(string -> alunos.add(new Aluno(string)));
         }
 
         return alunos;
+    }
+
+    public static Aluno get(int matricula) {
+        getAll();
+
+        return alunos
+            .stream()
+            .filter(aluno -> aluno.getMatricula() == matricula)
+            .collect(Collectors.toList()).get(0);
     }
 }

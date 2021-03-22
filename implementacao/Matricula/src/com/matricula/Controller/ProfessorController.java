@@ -5,6 +5,7 @@ import com.matricula.Model.Professor;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.Collectors;
 
 public class ProfessorController {
     private static ArrayList<Professor> professores = new ArrayList<>();
@@ -41,5 +42,14 @@ public class ProfessorController {
         }
 
         return professores;
+    }
+
+    public static Professor get(int matricula) {
+        getAll();
+
+        return professores
+                .stream()
+                .filter(professor -> professor.getMatricula() == matricula)
+                .collect(Collectors.toList()).get(0);
     }
 }
