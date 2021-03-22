@@ -1,4 +1,4 @@
-package com.matricula.Model;
+package sistemaDeMatriculas.Model;
 
 import java.io.*;
 import java.util.ArrayList;

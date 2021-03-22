@@ -1,4 +1,4 @@
-package com.matricula.Model;
+package sistemaDeMatriculas.Model;
 
 public class Aluno extends Usuario {
 }

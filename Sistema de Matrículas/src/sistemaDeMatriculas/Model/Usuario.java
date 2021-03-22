@@ -1,4 +1,4 @@
-package com.matricula.Model;
+package sistemaDeMatriculas.Model;
 
 public class Usuario extends DAO implements ObjectWithID {
     private int id;

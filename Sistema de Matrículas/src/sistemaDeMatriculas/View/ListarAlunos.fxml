@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemaDeMatriculas.Controller.ListarAlunosController">
+   <children>
+      <Pane prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
+      <Pane layoutY="555.0" prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
+      <Label layoutX="116.0" layoutY="135.0" prefHeight="33.0" prefWidth="59.0" text="Curso:" textFill="#013a63">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="494.0" layoutY="135.0" prefHeight="33.0" prefWidth="99.0" text="Disciplina:" textFill="#013a63">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBox_Curso" layoutX="194.0" layoutY="139.0" prefHeight="25.0" prefWidth="191.0" />
+      <ChoiceBox fx:id="choiceBox_Disciplina" layoutX="599.0" layoutY="139.0" prefHeight="25.0" prefWidth="191.0" />
+      <TableView fx:id="table_ListarAlunos" layoutX="78.0" layoutY="190.0" prefHeight="307.0" prefWidth="751.0" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="77.0">
+        <columns>
+          <TableColumn prefWidth="132.0" text="Matricula" />
+          <TableColumn prefWidth="618.0" text="Nome do Aluno" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_Sair" layoutX="721.0" layoutY="512.0" mnemonicParsing="false" onAction="#action_VoltarAreaDoProfessor" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #C82333;" text="Sair" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="378.0" layoutY="54.0" prefHeight="35.0" prefWidth="150.0" text="Listar Alunos" textFill="#013a63">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
