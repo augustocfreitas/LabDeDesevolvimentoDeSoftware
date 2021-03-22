@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemaDeMatriculas.Controller.MatricularEmDisciplinaController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemaDeMatriculas.Controller.CancelarMatriculaController">
    <children>
       <Pane prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
       <Pane layoutY="555.0" prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
@@ -28,12 +28,12 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="302.0" layoutY="73.0" prefHeight="50.0" prefWidth="366.0" text="Matricular em Disciplina" textFill="#013a63">
+      <Label layoutX="207.0" layoutY="71.0" prefHeight="50.0" prefWidth="492.0" text="Cancelar Matricula em Disciplina" textFill="#013a63">
          <font>
             <Font size="34.0" />
          </font>
       </Label>
-      <Button fx:id="btn_Matricular" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" onAction="#action_MatricularAlunoEmDisciplina" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #2A6F97;" text="Matricular" textFill="WHITE">
+      <Button fx:id="btn_Desmatricular" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" onAction="#action_DesmatricularAlunoEmDisciplina" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #2A6F97;" text="Desmatricular" textFill="WHITE">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

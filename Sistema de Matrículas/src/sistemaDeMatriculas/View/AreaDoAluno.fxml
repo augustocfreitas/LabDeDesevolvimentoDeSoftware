@@ -6,22 +6,31 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemaDeMatriculas.Controller.AreaDoAlunoController">
    <children>
       <Pane prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
       <Pane layoutY="555.0" prefHeight="45.0" prefWidth="905.0" style="-fx-background-color: #012a4a;" />
-      <Label layoutX="203.0" layoutY="73.0" prefHeight="45.0" prefWidth="500.0" text="Bem Vindo a Area do Professor" textFill="#013a63" AnchorPane.topAnchor="90.0">
+      <Label layoutX="228.0" layoutY="89.0" prefHeight="53.0" prefWidth="450.0" text="Bem Vindo a Area do Aluno" textAlignment="CENTER" textFill="#013a63" AnchorPane.topAnchor="89.0">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="btn_Sair" layoutX="745.0" layoutY="468.0" mnemonicParsing="false" onAction="#action_VoltarAreaDeLogin" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #C82333;" text="Sair" textFill="WHITE">
+      <Button fx:id="btn_Sair" layoutX="745.0" layoutY="469.0" mnemonicParsing="false" onAction="#action_VoltarAreaDeLogin" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #C82333;" text="Sair" textFill="WHITE">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btn_ListarAlunos" layoutX="203.0" layoutY="233.0" mnemonicParsing="false" onAction="#action_ListarAlunos" prefHeight="33.0" prefWidth="500.0" style="-fx-background-color: #014f86;" text="Listar Alunos" textFill="WHITE">
+      <Button fx:id="btn_MatricularEmDisciplina" layoutX="228.0" layoutY="229.0" mnemonicParsing="false" onAction="#action_MatricularEmDisciplina" prefHeight="35.0" prefWidth="450.0" style="-fx-background-color: #014f86;" text="Matricular em Disciplina" textFill="WHITE" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_CancelarMatricula" layoutX="228.0" layoutY="283.0" mnemonicParsing="false" onAction="#action_CancelarMatricula" prefHeight="35.0" prefWidth="450.0" style="-fx-background-color: #014f86;" text="Cancelar Matricula" textFill="WHITE" AnchorPane.topAnchor="255.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_GerarBoleto" layoutX="228.0" layoutY="332.0" mnemonicParsing="false" onAction="#action_GerarBoleto" prefHeight="35.0" prefWidth="450.0" style="-fx-background-color: #014f86;" text="Gerar Boleto" textFill="WHITE" AnchorPane.topAnchor="310.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
