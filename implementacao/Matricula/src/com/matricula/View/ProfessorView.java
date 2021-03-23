@@ -1,7 +1,9 @@
 package com.matricula.View;
 
 import com.matricula.Controller.AlunoController;
+import com.matricula.Controller.DisciplinaController;
 import com.matricula.Controller.OfertaController;
+import com.matricula.Model.Disciplina;
 import com.matricula.Utils.Session;
 
 import java.util.Scanner;
@@ -14,10 +16,18 @@ public class ProfessorView {
             .stream()
             .filter(oferta -> oferta.getMatriculaProfessor() == Session.getMatricula())
             .forEach(oferta -> {
+                if (oferta.getMatriculasAlunos().size() <= 3) {
+                    return;
+                }
+
+                Disciplina d = DisciplinaController.get(oferta.getIdDisciplina());
+
+                System.out.println("Disciplina: " + d.getNome());
                 oferta.getMatriculasAlunos().forEach(matricula -> {
                     var aluno = AlunoController.get(matricula);
                     System.out.println("Matricula: " + aluno.getMatricula() + " | Nome: " + aluno.getNome());
                 });
+                System.out.println("\n");
             });
     }
 

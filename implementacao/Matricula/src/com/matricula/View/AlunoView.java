@@ -62,7 +62,7 @@ public class AlunoView {
                 var professor = ProfessorController.get(oferta.getMatriculaProfessor());
                 var disciplina = DisciplinaController.get(oferta.getIdDisciplina());
 
-                System.out.println("Disciplina: " + disciplina.getNome() + " | Professor: " + professor.getNome() + " | Obrigatória: " + (disciplina.isObrigatoria() ? "sim" : "não"));
+                System.out.println("ID:" + oferta.getId() + "| Disciplina:" + disciplina.getNome() + " | Professor: " + professor.getNome() + " | Obrigatória: " + (disciplina.isObrigatoria() ? "sim" : "não"));
             });
         System.out.println("Digite o id da oferta");
         var id = Integer.parseInt(sc.nextLine());
@@ -83,10 +83,14 @@ public class AlunoView {
                 .stream()
                 .filter(oferta -> oferta.getMatriculasAlunos().contains(Session.getMatricula()))
                 .forEach(oferta -> {
+                    if (oferta.getMatriculasAlunos().size() >= 60) {
+                        return;
+                    }
+
                     var professor = ProfessorController.get(oferta.getMatriculaProfessor());
                     var disciplina = DisciplinaController.get(oferta.getIdDisciplina());
 
-                    System.out.println("Disciplina: " + disciplina.getNome() + " | Professor: " + professor.getNome() + " | Obrigatória: " + (disciplina.isObrigatoria() ? "sim" : "não"));
+                    System.out.println("ID:" + oferta.getId() + "| Disciplina: " + disciplina.getNome() + " | Professor: " + professor.getNome() + " | Obrigatória: " + (disciplina.isObrigatoria() ? "sim" : "não"));
                 });
         System.out.println("Digite o id da oferta");
         var id = Integer.parseInt(sc.nextLine());
